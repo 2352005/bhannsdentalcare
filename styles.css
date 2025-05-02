@@ -1,0 +1,211 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #fff;
+    color: #1b263b;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #ff6200;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: 600;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 400;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #1b263b;
+}
+
+.hamburger {
+    display: none;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.section {
+    padding: 80px 5%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.home {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://via.placeholder.com/1920x1080');
+    background-size: cover;
+    color: #fff;
+}
+
+.hero-content h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-in;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    animation: fadeIn 1.5s ease-in;
+}
+
+.cta-button {
+    background: #ff6200;
+    color: #fff;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.cta-button:hover {
+    background: #1b263b;
+    transform: scale(1.05);
+}
+
+h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #1b263b;
+}
+
+.services-grid, .doctors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.service-card, .doctor-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-card:hover, .doctor-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+.service-card img, .doctor-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.testimonial-slider {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 20px;
+}
+
+.testimonial-card {
+    flex: 0 0 300px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    scroll-snap-align: start;
+}
+
+.contact-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.contact-info {
+    flex: 1;
+    min-width: 300px;
+}
+
+.map {
+    flex: 1;
+    min-width: 300px;
+}
+
+.social-links a {
+    margin: 0 10px;
+    color: #ff6200;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.social-links a:hover {
+    color: #1b263b;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: #ff6200;
+        padding: 20px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hero-content h1 {
+        font-size: 2em;
+    }
+
+    .contact-content {
+        flex-direction: column;
+    }
+}
