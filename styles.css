@@ -2,12 +2,19 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Inter', sans-serif;
 }
 
 body {
-    background: #fff;
+    background: #f9f9f9;
     color: #1b263b;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 .navbar {
@@ -19,193 +26,313 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 5%;
+    padding: 15px 20px;
     z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .logo {
-    font-size: 1.8em;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.5rem;
     font-weight: 600;
 }
 
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
+.logo-img {
+    width: 40px;
+    border-radius: 50%;
 }
 
-.nav-links a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: 400;
-    transition: color 0.3s;
-}
-
-.nav-links a:hover {
-    color: #1b263b;
-}
-
-.hamburger {
+.nav-toggle {
     display: none;
-    font-size: 1.5em;
+    font-size: 1.5rem;
     cursor: pointer;
 }
 
-.section {
-    padding: 80px 5%;
-    min-height: 100vh;
+.nav-menu {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    list-style: none;
+    gap: 20px;
 }
 
-.home {
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://via.placeholder.com/1920x1080');
-    background-size: cover;
+.nav-link {
     color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #e6e6e6;
+}
+
+.section {
+    padding: 80px 20px;
+    scroll-margin-top: 70px;
+}
+
+.hero {
+    background: linear-gradient(rgba(27, 38, 59, 0.7), rgba(27, 38, 59, 0.7)), url('https://via.placeholder.com/1920x1080');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    animation: slideUp 1s ease-out;
 }
 
 .hero-content h1 {
-    font-size: 3em;
+    font-size: 3rem;
     margin-bottom: 20px;
-    animation: fadeIn 1s ease-in;
 }
 
 .hero-content p {
-    font-size: 1.2em;
+    font-size: 1.2rem;
     margin-bottom: 30px;
-    animation: fadeIn 1.5s ease-in;
 }
 
-.cta-button {
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.btn-primary {
     background: #ff6200;
     color: #fff;
-    padding: 12px 25px;
-    text-decoration: none;
-    border-radius: 25px;
-    font-weight: 600;
-    transition: background 0.3s, transform 0.3s;
 }
 
-.cta-button:hover {
+.btn-secondary {
     background: #1b263b;
-    transform: scale(1.05);
+    color: #fff;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    background: #e55a00;
 }
 
 h2 {
-    font-size: 2.5em;
-    margin-bottom: 30px;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 40px;
     color: #1b263b;
 }
 
-.services-grid, .doctors-grid {
+.about-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+    animation: fadeIn 1s ease-out;
+}
+
+.services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
-    width: 100%;
-    max-width: 1200px;
+    margin-bottom: 30px;
 }
 
-.service-card, .doctor-card {
+.service-card {
     background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
 }
 
-.service-card:hover, .doctor-card:hover {
+.service-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
 }
 
-.service-card img, .doctor-card img {
+.service-img {
     width: 100%;
-    border-radius: 10px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    padding: 15px;
+}
+
+.price {
+    font-size: 1.2rem;
+    color: #ff6200;
+    padding: 0 15px 15px;
+}
+
+.doctors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.doctor-card {
+    background: #fff;
+    border-radius: 15px;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.doctor-card:hover {
+    transform: translateY(-10px);
+}
+
+.doctor-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
     margin-bottom: 15px;
 }
 
-.testimonial-slider {
+.testimonial-carousel {
     display: flex;
-    overflow-x: auto;
+    overflow: hidden;
+    position: relative;
     gap: 20px;
-    width: 100%;
-    max-width: 1200px;
-    scroll-snap-type: x mandatory;
-    padding-bottom: 20px;
 }
 
-.testimonial-card {
-    flex: 0 0 300px;
+.testimonial-item {
+    flex: 0 0 100%;
     background: #fff;
+    border-radius: 15px;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    scroll-snap-align: start;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.5s ease;
 }
 
-.contact-content {
-    display: flex;
-    flex-wrap: wrap;
+.testimonial-text {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+.carousel-controls {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.carousel-prev, .carousel-next {
+    background: #ff6200;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.carousel-prev:hover, .carousel-next:hover {
+    background: #e55a00;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 40px;
-    justify-content: center;
-    width: 100%;
-    max-width: 1200px;
 }
 
 .contact-info {
-    flex: 1;
-    min-width: 300px;
+    font-size: 1.1rem;
 }
 
-.map {
-    flex: 1;
-    min-width: 300px;
+.contact-info p {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-.social-links a {
-    margin: 0 10px;
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.social-icon {
     color: #ff6200;
-    text-decoration: none;
-    font-weight: 600;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
 }
 
-.social-links a:hover {
+.social-icon:hover {
     color: #1b263b;
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    color: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(50px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
 @media (max-width: 768px) {
-    .hamburger {
+    .nav-toggle {
         display: block;
     }
 
-    .nav-links {
+    .nav-menu {
         display: none;
-        flex-direction: column;
         position: absolute;
-        top: 60px;
+        top: 70px;
         left: 0;
         width: 100%;
         background: #ff6200;
+        flex-direction: column;
         padding: 20px;
     }
 
-    .nav-links.active {
+    .nav-menu.active {
         display: flex;
     }
 
     .hero-content h1 {
-        font-size: 2em;
+        font-size: 2rem;
     }
 
-    .contact-content {
-        flex-direction: column;
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .testimonial-item {
+        flex: 0 0 100%;
     }
 }
