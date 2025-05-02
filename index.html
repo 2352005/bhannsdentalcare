@@ -5,128 +5,153 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bhaan's Dental Care</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
-        <div class="logo">Bhaan's Dental Care</div>
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#doctors">Doctors</a></li>
-            <li><a href="#testimonials">Testimonials</a></li>
-            <li><a href="#contact">Contact</a></li>
+        <div class="logo">
+            <img src="https://via.placeholder.com/50" alt="Logo" class="logo-img">
+            <span>Bhaan's Dental Care</span>
+        </div>
+        <div class="nav-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="#home" class="nav-link">Home</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#services" class="nav-link">Services</a></li>
+            <li><a href="#doctors" class="nav-link">Doctors</a></li>
+            <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
-        <div class="hamburger">☰</div>
     </nav>
 
     <!-- Home Section -->
-    <section id="home" class="section home">
+    <section id="home" class="section hero">
         <div class="hero-content">
-            <h1>Welcome to Bhaan's Dental Care</h1>
-            <p>Your smile, our priority. Book your appointment today!</p>
-            <a href="https://forms.gle/sample-booking-form" target="_blank" class="cta-button">Book Appointment</a>
+            <h1>Smile Bright with Bhaan's Dental Care</h1>
+            <p>Expert dental care for a confident smile. Book now!</p>
+            <a href="https://forms.gle/sample-booking-form" target="_blank" class="btn btn-primary">Book Appointment</a>
         </div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="section about">
-        <h2>About Us</h2>
-        <p>At Bhaan's Dental Care, we are committed to providing top-notch dental services with a focus on patient comfort and satisfaction. Located in the heart of Chennai, our clinic combines advanced technology with a caring approach.</p>
+        <div class="container">
+            <h2>About Us</h2>
+            <p class="about-text">Bhaan's Dental Care is dedicated to delivering exceptional dental services with a patient-first approach. Nestled in Chennai, our clinic blends cutting-edge technology with compassionate care to ensure your smile shines.</p>
+        </div>
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="section services">
-        <h2>Our Services</h2>
-        <div class="services-grid">
-            <div class="service-card">
-                <img src="https://via.placeholder.com/300x200" alt="Dental Implants">
-                <h3>Dental Implants</h3>
-                <p>₹25,000</p>
+    <section id="services" Wclass="section services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <img src="https://via.placeholder.com/300x200" alt="Dental Implants" class="service-img">
+                    <h3>Dental Implants</h3>
+                    <p class="price">₹25,000</p>
+                </div>
+                <div class="service-card">
+                    <img src="https://via.placeholder.com/300x200" alt="Teeth Whitening" class="service-img">
+                    <h3>Teeth Whitening</h3>
+                    <p class="price">₹5,000</p>
+                </div>
+                <div class="service-card">
+                    <img src="https://via.placeholder.com/300x200" alt="Root Canal" class="service-img">
+                    <h3>Root Canal</h3>
+                    <p class="price">₹8,000</p>
+                </div>
+                <div class="service-card">
+                    <img src="https://via.placeholder.com/300x200" alt="Braces" class="service-img">
+                    <h3>Braces</h3>
+                    <p class="price">₹30,000</p>
+                </div>
             </div>
-            <div class="service-card">
-                <img src="https://via.placeholder.com/300x200" alt="Teeth Whitening">
-                <h3>Teeth Whitening</h3>
-                <p>₹5,000</p>
-            </div>
-            <div class="service-card">
-                <img src="https://via.placeholder.com/300x200" alt="Root Canal">
-                <h3>Root Canal</h3>
-                <p>₹8,000</p>
-            </div>
-            <div class="service-card">
-                <img src="https://via.placeholder.com/300x200" alt="Braces">
-                <h3>Braces</h3>
-                <p>₹30,000</p>
-            </div>
+            <a href="https://wa.me/919841648836" target="_blank" class="btn btn-secondary">Book via WhatsApp</a>
         </div>
-        <a href="https://wa.me/919841648836" target="_blank" class="cta-button">Book Appointment via WhatsApp</a>
     </section>
 
     <!-- Doctors Section -->
     <section id="doctors" class="section doctors">
-        <h2>Our Doctors</h2>
-        <div class="doctors-grid">
-            <div class="doctor-card">
-                <img src="https://via.placeholder.com/150" alt="Dr. Bhavani">
-                <h3>Dr. Bhavani Roopan Vijayakumar</h3>
-                <p>Implantologist, BDS, MDS</p>
-                <p>10+ Years Experience</p>
-            </div>
-            <div class="doctor-card">
-                <img src="https://via.placeholder.com/150" alt="Dr. John">
-                <h3>Dr. John Doe</h3>
-                <p>General Dentist, BDS</p>
-                <p>8+ Years Experience</p>
+        <div class="container">
+            <h2>Meet Our Doctors</h2>
+            <div class="doctors-grid">
+                <div class="doctor-card">
+                    <img src="https://via.placeholder.com/150" alt="Dr. Bhavani" class="doctor-img">
+                    <h3>Dr. Bhavani Roopan Vijayakumar</h3>
+                    <p>Implantologist, BDS, MDS</p>
+                    <p>10+ Years Experience</p>
+                </div>
+                <div class="doctor-card">
+                    <img src="https://via.placeholder.com/150" alt="Dr. John" class="doctor-img">
+                    <h3>Dr. John Doe</h3>
+                    <p>General Dentist, BDS</p>
+                    <p>8+ Years Experience</p>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Testimonials Section -->
     <section id="testimonials" class="section testimonials">
-        <h2>Testimonials</h2>
-        <div class="testimonial-slider">
-            <div class="testimonial-card">
-                <p>"Amazing service and caring staff!"</p>
-                <h4>- Priya S.</h4>
+        <div class="container">
+            <h2>What Our Patients Say</h2>
+            <div class="testimonial-carousel">
+                <div class="testimonial-item">
+                    <p class="testimonial-text">"The best dental experience I've ever had! The staff is so friendly."</p>
+                    <h4>- Priya S.</h4>
+                </div>
+                <div class="testimonial-item">
+                    <p class="testimonial-text">"Dr. Bhavani's expertise made my treatment seamless."</p>
+                    <h4>- Arun K.</h4>
+                </div>
+                <div class="testimonial-item">
+                    <p class="testimonial-text">"Highly recommend for anyone needing dental care!"</p>
+                    <h4>- Meena R.</h4>
+                </div>
+                <div class="testimonial-item">
+                    <p class="testimonial-text">"Comfortable and professional environment."</p>
+                    <h4>- Sanjay M.</h4>
+                </div>
             </div>
-            <div class="testimonial-card">
-                <p>"Best dental care in Chennai!"</p>
-                <h4>- Arun K.</h4>
-            </div>
-            <div class="testimonial-card">
-                <p>"Dr. Bhavani is highly skilled."</p>
-                <h4>- Meena R.</h4>
-            </div>
-            <div class="testimonial-card">
-                <p>"Very comfortable experience."</p>
-                <h4>- Sanjay M.</h4>
+            <div class="carousel-controls">
+                <button class="carousel-prev"><i class="fas fa-chevron-left"></i></button>
+                <button class="carousel-next"><i class="fas fa-chevron-right"></i></button>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="section contact">
-        <h2>Contact Us</h2>
-        <div class="contact-content">
-            <div class="contact-info">
-                <p><strong>Address:</strong> No:61, Nelvayal Road, Perambur, Chennai, Tamilnadu - 600011</p>
-                <p><strong>Timings:</strong> 09:00 AM - 01:00 PM, 05:00 PM - 10:00 PM</p>
-                <p><strong>Contact:</strong> +91 9841648836</p>
-                <div class="social-links">
-                    <a href="https://wa.me/919841648836" target="_blank">WhatsApp</a>
-                    <a href="https://instagram.com" target="_blank">Instagram</a>
-                    <a href="https://facebook.com" target="_blank">Facebook</a>
+        <div class="container">
+            <h2>Contact Us</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <p><i class="fas fa-map-marker-alt"></i> No:61, Nelvayal Road, Perambur, Chennai, Tamilnadu - 600011</p>
+                    <p><i class="fas fa-clock"></i> 09:00 AM - 01:00 PM, 05:00 PM - 10:00 PM</p>
+                    <p><i class="fas fa-phone"></i> +91 9841648836</p>
+                    <div class="social-links">
+                        <a href="https://wa.me/919841648836" target="_blank" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://instagram.com" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="https://facebook.com" target="_blank" class="social-icon"><i class="fab fa-facebook"></i></a>
+                    </div>
+                    <a href="https://forms.gle/sample-contact-form" target="_blank" class="btn btn-primary">Get in Touch</a>
                 </div>
-                <a href="https://forms.gle/sample-contact-form" target="_blank" class="cta-button">Contact Us</a>
-            </div>
-            <div class="map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.374394123456!2d80.244678!3d13.107856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5267f3b7c7e2b9%3A0x4f8b7c7f9e8b7c7f!2sPerambur%2C%20Chennai%2C%20Tamil%20Nadu%20600011!5e0!3m2!1sen!2sin!4v1698765432109!5m2!1sen!2sin" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                <div class="contact-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.374394123456!2d80.244678!3d13.107856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5267f3b7c7e2b9%3A0x4f8b7c7f9e8b7c7f!2sPerambur%2C%20Chennai%2C%20Tamil%20Nadu%20600011!5e0!3m2!1sen!2sin!4v1698765432109!5m2!1sen!2sin" width="100%" height="300" style="border:0; border-radius: 10px;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
             </div>
         </div>
     </section>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/919841648836" target="_blank" class="whatsapp-float">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
     <script src="script.js"></script>
 </body>
